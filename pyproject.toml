@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "langchain-superagent"
+version = "0.1.0"
+description = "LangChain tools and toolkit for the HivemindOS SuperAgent API (40+ managed services, 400+ operations)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "HivePunk #21" }]
+keywords = ["langchain", "hivemindos", "superagent", "agents", "tools", "ai"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "langchain-core>=0.3",
+    "httpx>=0.27",
+    "pydantic>=2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+]
+
+[project.urls]
+Homepage = "https://hivemindos.app"
+Documentation = "https://hivemindos.app/superagent-api/docs/"
+API = "https://api.hivemindos.app/openapi.json"
+
+[tool.setuptools.packages.find]
+where = ["src"]
